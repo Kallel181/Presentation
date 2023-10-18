@@ -1,0 +1,61 @@
+{
+  "slides": [
+    {
+      "type": "slide",
+      "start_animation": 0,
+      "end_animation": 1,
+      "number": 1
+    },
+    {
+      "type": "slide",
+      "start_animation": 1,
+      "end_animation": 5,
+      "number": 2
+    },
+    {
+      "type": "slide",
+      "start_animation": 5,
+      "end_animation": 7,
+      "number": 3
+    },
+    {
+      "type": "slide",
+      "start_animation": 7,
+      "end_animation": 9,
+      "number": 4
+    },
+    {
+      "type": "slide",
+      "start_animation": 9,
+      "end_animation": 10,
+      "number": 5
+    },
+    {
+      "type": "last",
+      "start_animation": 10,
+      "end_animation": 14,
+      "number": 6
+    }
+  ],
+  "files": [
+    "slides\\files\\introducao\\3409084134_3774502186_631829896.mp4",
+    "slides\\files\\introducao\\3409084134_1550484146_4174018169.mp4",
+    "slides\\files\\introducao\\351559545_1888425306_1343768192.mp4",
+    "slides\\files\\introducao\\351559545_2581707707_249463808.mp4",
+    "slides\\files\\introducao\\351559545_363472752_457277833.mp4",
+    "slides\\files\\introducao\\351559545_166270359_3151207273.mp4",
+    "slides\\files\\introducao\\351559545_2942696484_3828168139.mp4",
+    "slides\\files\\introducao\\351559545_1020965292_316176714.mp4",
+    "slides\\files\\introducao\\351559545_3407983899_782794464.mp4",
+    "slides\\files\\introducao\\351559545_3789811391_2220446801.mp4",
+    "slides\\files\\introducao\\351559545_442349293_1521741162.mp4",
+    "slides\\files\\introducao\\351559545_2043224038_1306161388.mp4",
+    "slides\\files\\introducao\\351559545_829078432_3671833863.mp4",
+    "slides\\files\\introducao\\351559545_1888425306_2570447255.mp4"
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "black"
+}
