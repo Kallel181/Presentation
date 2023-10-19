@@ -92,22 +92,102 @@ class introducao(Slide):
         self.next_slide()
 
         #==================== Exemplo com Latex ====================
+        code2 = Code(
+        "Example1_1.py",
+        tab_width=2,
+        background_stroke_width=1,
+        background_stroke_color=WHITE,
+        insert_line_no=True,
+        style=Code.styles_list[15],
+        background="rectangle",
+        language="python",
+        ).scale(0.8)
+        code2.move_to(code1.get_center())
         
+        self.play(FadeOut(text1_1),FadeOut(arrow),Transform(code1,code2),FadeOut(circle))
+        self.wait(0.1)
+        self.next_slide()
+        
+        latex = MathTex("4^2 &= x^2 + x^2\\\\",
+                        "16 &= 2x^2\\\\",
+                        "\\frac{16}{2} &= x^2\\\\",
+                        "8 &= x^2\\\\",
+                        "x &= \\sqrt{8}\\\\",
+                        "x &= 2 \\sqrt{2}\\\\")
+        
+        latex2 = MathTex(r"4^2 &= x^2 + x^2\\",
+                        r"16 &= 2x^2\\",
+                        r"\frac{16}{2} &= x^2\\",
+                        r"8 &= x^2\\",
+                        r"x &= \sqrt{8}\\",
+                        r"x &= 2 \sqrt{2}\\",
+                        substrings_to_isolate="x")
+        
+        latex.next_to(code2,RIGHT)
+        latex.shift(RIGHT*2)
+        latex2.move_to(latex.get_center())
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-class exemplo1(Slide):
+        latex.shift(UP*(1/2))
+        latex2.shift(UP*(1/2))
+        
+        
+        for i in range(0,6):
+            self.play(Write(latex[i]))
+            self.wait(0.1)
+            self.next_slide()
+            
+        code3 = Code(
+        "Example1_2.py",
+        tab_width=2,
+        background_stroke_width=1,
+        background_stroke_color=WHITE,
+        insert_line_no=True,
+        style=Code.styles_list[15],
+        background="rectangle",
+        language="python",
+        ).scale(0.8)
+        code3.move_to(code1.get_center())
+        code3.shift(UP*(1/2))
+        
+        self.play(Transform(code1,code3))
+        self.next_slide()
+        
+        latex2.set_color_by_tex("x", RED)
+        self.play(FadeIn(latex2),FadeOut(latex))
+        self.next_slide()
+        
+        # Apagando tudo
+        self.play(
+            *[FadeOut(mob)for mob in self.mobjects]
+        )
+        self.next_slide()
+        
+        #==================== De onde surgiu o Manim ? ====================
+        
+        
+        
+        
+        
+        
+        
+        #==================== Como instalar o Manim ? ====================
+        
+        
+        
+        
+        
+        
+        
+        # Apagando tudo
+        self.play(
+            *[FadeOut(mob)for mob in self.mobjects]
+        )
+        self.next_slide()
+        
+        
+        
+#==================== Exemplo basico ====================
+class exemplo_basico(Slide):
     def construct(self):
         code1 = Code(
         "Example1.py",
