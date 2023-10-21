@@ -130,7 +130,6 @@ class introducao(Slide):
         latex.shift(UP*(1/2))
         latex2.shift(UP*(1/2))
         
-        
         for i in range(0,6):
             self.play(Write(latex[i]))
             self.wait(0.1)
@@ -163,20 +162,77 @@ class introducao(Slide):
         self.next_slide()
         
         #==================== De onde surgiu o Manim ? ====================
+        text2 = Text("De onde surgiu o Manim ?")
+
+        self.play(Write(text2))
+        self.next_slide()
+
+
+        self.play(text2.animate.shift((UP*3)))
+        self.next_slide()   
+
         
+        grant_image = ImageMobject("assets\grant_sanderson.png").scale(0.5)
+        grant_image.move_to(ORIGIN)
         
+        grant_text = Text("Grant Sanderson").scale(0.6)
+        grant_text.next_to(grant_image,DOWN)
+       
+        self.play(FadeIn(grant_image),FadeIn(grant_text))
+        self.play(grant_image.animate.shift(LEFT*3),grant_text.animate.shift(LEFT*3))
+        self.next_slide()
+
+
+        yt_grant_logo = SVGMobject(r"assets\3B1B_Logo.svg").scale(1.1)
+        yt_name = Text("3Blue1Brown").scale(0.6)
+        yt_logo = SVGMobject("assets\youtube-svgrepo-com.svg").scale(0.3).next_to(yt_name,LEFT)
+
+        underline = VGroup(yt_name,yt_logo)
+        underline.next_to(yt_grant_logo,DOWN)
+
+        rightasset = VGroup(yt_grant_logo,underline)
+
+        rightasset.shift(RIGHT)
+        self.play(FadeIn(rightasset),rightasset.animate.shift(RIGHT*2))
+        self.next_slide()
+
+        # Apagando tudo
+        self.play(
+            *[FadeOut(mob)for mob in self.mobjects]
+        )
+        self.next_slide()
+
+        #==================== Primeiros passos: Como instalar o Manim ? ====================
+        text3 = Text("Primeiros passos: Como instalar o Manim ?")
+
+        self.play(Write(text3))
+        self.next_slide()
+
+        self.play(text3.animate.shift((UP*3.3)))
+        self.next_slide()
+
+
+        python_logo = ImageMobject("assets\Python-logo-notext.svg.png")
+        miktext_logo = ImageMobject("assets\miktexlogo.png")
+        visual_logo = ImageMobject("assets\VS_Code_logo.png")
+        ffmpeg_logo = ImageMobject(r"assets\1280px-FFmpeg-Logo.png")
+
+        python_logo.shift(UL+LEFT)
+        miktext_logo.shift(UR+RIGHT)
+        ffmpeg_logo.shift(DR*2)
+        visual_logo.shift(DL*2)
+
+        self.play(FadeIn(python_logo))
+        self.next_slide()
+
+        self.play(FadeIn(miktext_logo))
+        self.next_slide()
+       
+        self.play(FadeIn(ffmpeg_logo))
+        self.next_slide()
         
-        
-        
-        
-        
-        #==================== Como instalar o Manim ? ====================
-        
-        
-        
-        
-        
-        
+        self.play(FadeIn(visual_logo))
+        self.next_slide()        
         
         # Apagando tudo
         self.play(
@@ -187,24 +243,24 @@ class introducao(Slide):
         
         
 #==================== Exemplo basico ====================
-class exemplo_basico(Slide):
+class cores(Slide):
     def construct(self):
-        code1 = Code(
-        "Example1.py",
-        tab_width=2,
-        background_stroke_width=1,
-        background_stroke_color=WHITE,
-        insert_line_no=True,
-        style=Code.styles_list[15],
-        background="rectangle",
-        language="python",
+        self.camera.background_color = "#242424"
+
+        myBaseTemplate = TexTemplate(
+            documentclass="\documentclass[preview]{standalone}"
         )
+        myBaseTemplate.add_to_preamble(r"\usepackage{ragged2e}")  
+
         
-        self.play(Write(code1))   
-        self.next_slide()
 
 
-class exemplo2(Slide):
+
+
+        
+
+
+class movimentacao_e_posicao(Slide):
     def construct(self):
         pass
 

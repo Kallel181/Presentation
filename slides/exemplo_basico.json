@@ -1,0 +1,18 @@
+{
+  "slides": [
+    {
+      "type": "last",
+      "start_animation": 0,
+      "end_animation": 1,
+      "number": 1
+    }
+  ],
+  "files": [
+    "slides\\files\\exemplo_basico\\3409084134_1699297757_223132457.mp4"
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "black"
+}
