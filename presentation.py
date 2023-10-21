@@ -3,7 +3,7 @@ from manim_slides import Slide
 
 class introducao(Slide):
     def construct(self):
-        self.camera.background_color = "#242424"
+        self.camera.background_color = "#1c1c1c"
 
         myBaseTemplate = TexTemplate(
             documentclass="\documentclass[preview]{standalone}"
@@ -242,24 +242,26 @@ class introducao(Slide):
         
         
         
-#==================== Exemplo basico ====================
+#==================== Como as cores funcionam ====================
 class cores(Slide):
     def construct(self):
-        self.camera.background_color = "#242424"
+        self.camera.background_color = "#1c1c1c"
 
         myBaseTemplate = TexTemplate(
             documentclass="\documentclass[preview]{standalone}"
         )
         myBaseTemplate.add_to_preamble(r"\usepackage{ragged2e}")  
 
-        
-
-
 
 
         
 
 
+
+
+        
+
+#==================== Movimentação e Posição ====================
 class movimentacao_e_posicao(Slide):
     def construct(self):
         pass

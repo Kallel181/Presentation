@@ -1,2 +1,2 @@
-manim -qh presentation.py exemplo_basico
-manim-slides exemplo_basico
+manim -qh presentation.py introducao
+manim-slides introducao
