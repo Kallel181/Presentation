@@ -1,0 +1,96 @@
+{
+  "slides": [
+    {
+      "type": "slide",
+      "start_animation": 0,
+      "end_animation": 1,
+      "number": 1
+    },
+    {
+      "type": "slide",
+      "start_animation": 1,
+      "end_animation": 2,
+      "number": 2
+    },
+    {
+      "type": "slide",
+      "start_animation": 2,
+      "end_animation": 4,
+      "number": 3
+    },
+    {
+      "type": "slide",
+      "start_animation": 4,
+      "end_animation": 5,
+      "number": 4
+    },
+    {
+      "type": "slide",
+      "start_animation": 5,
+      "end_animation": 6,
+      "number": 5
+    },
+    {
+      "type": "slide",
+      "start_animation": 6,
+      "end_animation": 7,
+      "number": 6
+    },
+    {
+      "type": "slide",
+      "start_animation": 7,
+      "end_animation": 8,
+      "number": 7
+    },
+    {
+      "type": "slide",
+      "start_animation": 8,
+      "end_animation": 9,
+      "number": 8
+    },
+    {
+      "type": "slide",
+      "start_animation": 9,
+      "end_animation": 10,
+      "number": 9
+    },
+    {
+      "type": "slide",
+      "start_animation": 10,
+      "end_animation": 11,
+      "number": 10
+    },
+    {
+      "type": "slide",
+      "start_animation": 11,
+      "end_animation": 12,
+      "number": 11
+    },
+    {
+      "type": "last",
+      "start_animation": 12,
+      "end_animation": 13,
+      "number": 12
+    }
+  ],
+  "files": [
+    "slides\\files\\cores\\26366939_2968077787_631829896.mp4",
+    "slides\\files\\cores\\26366939_181963307_4174018169.mp4",
+    "slides\\files\\cores\\2402167774_1112338500_2569802819.mp4",
+    "slides\\files\\cores\\2402167774_1266459864_3361564005.mp4",
+    "slides\\files\\cores\\2402167774_1841836228_2850373954.mp4",
+    "slides\\files\\cores\\2402167774_731479308_690829625.mp4",
+    "slides\\files\\cores\\2402167774_3554084083_2333815265.mp4",
+    "slides\\files\\cores\\2402167774_476872147_3509404710.mp4",
+    "slides\\files\\cores\\2402167774_1413036514_807248228.mp4",
+    "slides\\files\\cores\\2402167774_2391072638_807248228.mp4",
+    "slides\\files\\cores\\2402167774_2514857388_807248228.mp4",
+    "slides\\files\\cores\\2402167774_3114645393_807248228.mp4",
+    "slides\\files\\cores\\2402167774_3259177770_2229391483.mp4"
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "black"
+}

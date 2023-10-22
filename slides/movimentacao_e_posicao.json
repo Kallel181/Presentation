@@ -1,0 +1,167 @@
+{
+  "slides": [
+    {
+      "type": "slide",
+      "start_animation": 0,
+      "end_animation": 1,
+      "number": 1
+    },
+    {
+      "type": "slide",
+      "start_animation": 1,
+      "end_animation": 2,
+      "number": 2
+    },
+    {
+      "type": "slide",
+      "start_animation": 2,
+      "end_animation": 3,
+      "number": 3
+    },
+    {
+      "type": "slide",
+      "start_animation": 3,
+      "end_animation": 4,
+      "number": 4
+    },
+    {
+      "type": "slide",
+      "start_animation": 4,
+      "end_animation": 5,
+      "number": 5
+    },
+    {
+      "type": "slide",
+      "start_animation": 5,
+      "end_animation": 7,
+      "number": 6
+    },
+    {
+      "type": "slide",
+      "start_animation": 7,
+      "end_animation": 8,
+      "number": 7
+    },
+    {
+      "type": "slide",
+      "start_animation": 8,
+      "end_animation": 10,
+      "number": 8
+    },
+    {
+      "type": "slide",
+      "start_animation": 10,
+      "end_animation": 11,
+      "number": 9
+    },
+    {
+      "type": "slide",
+      "start_animation": 11,
+      "end_animation": 13,
+      "number": 10
+    },
+    {
+      "type": "slide",
+      "start_animation": 13,
+      "end_animation": 15,
+      "number": 11
+    },
+    {
+      "type": "slide",
+      "start_animation": 15,
+      "end_animation": 16,
+      "number": 12
+    },
+    {
+      "type": "slide",
+      "start_animation": 16,
+      "end_animation": 18,
+      "number": 13
+    },
+    {
+      "type": "slide",
+      "start_animation": 18,
+      "end_animation": 19,
+      "number": 14
+    },
+    {
+      "type": "slide",
+      "start_animation": 19,
+      "end_animation": 20,
+      "number": 15
+    },
+    {
+      "type": "slide",
+      "start_animation": 20,
+      "end_animation": 22,
+      "number": 16
+    },
+    {
+      "type": "slide",
+      "start_animation": 22,
+      "end_animation": 24,
+      "number": 17
+    },
+    {
+      "type": "slide",
+      "start_animation": 24,
+      "end_animation": 26,
+      "number": 18
+    },
+    {
+      "type": "slide",
+      "start_animation": 26,
+      "end_animation": 27,
+      "number": 19
+    },
+    {
+      "type": "slide",
+      "start_animation": 27,
+      "end_animation": 29,
+      "number": 20
+    },
+    {
+      "type": "last",
+      "start_animation": 29,
+      "end_animation": 30,
+      "number": 21
+    }
+  ],
+  "files": [
+    "slides\\files\\movimentacao_e_posicao\\26366939_2968077787_631829896.mp4",
+    "slides\\files\\movimentacao_e_posicao\\26366939_1913854723_4174018169.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_1547663543_3787569237.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_1605505395_2213718484.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_1683115412_1310485735.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_4248728553_1384060707.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_499496708_3728199085.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_1166541830_2869865027.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_2587876808_3898224707.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_133839673_2722629720.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_2169894103_3372129833.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_222056574_3242102728.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_1483161764_7750592.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_1133158341_1850643776.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_1108034261_2211564791.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_2169894103_1824023063.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_514569119_2367294573.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_1483161764_4036877903.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_239274938_1850643776.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_2213556511_1153732648.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_1226967417_1785082496.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_1530563867_1110148205.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_2029629627_4045793727.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_334843641_1879058249.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_4250840000_2320165620.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_2292793984_1440306795.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_415866171_3115577005.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_2413347645_3790119584.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_2389981718_627408796.mp4",
+    "slides\\files\\movimentacao_e_posicao\\2402167774_4266541918_2912064904.mp4"
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "black"
+}

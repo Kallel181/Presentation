@@ -246,24 +246,415 @@ class introducao(Slide):
 class cores(Slide):
     def construct(self):
         self.camera.background_color = "#1c1c1c"
+        self.wait()
+        self.next_slide() #Initial stop
 
         myBaseTemplate = TexTemplate(
             documentclass="\documentclass[preview]{standalone}"
         )
         myBaseTemplate.add_to_preamble(r"\usepackage{ragged2e}")  
 
+        color_square = Square(color=WHITE,side_length=4)
+        color_square.set_fill(opacity=1,color=WHITE)
+        color_square.move_to(ORIGIN)
 
+        hashtag = Text("#")
+        r_amount = Text("ff")
+        g_amount = Text("ff")
+        b_amount = Text("ff")
 
+        r_amount.next_to(hashtag,RIGHT,buff=0)
+        g_amount.next_to(r_amount,RIGHT,buff=0)
+        b_amount.next_to(g_amount,RIGHT,buff=0)
+
+        color_hex_labels = VGroup(hashtag,r_amount,g_amount,b_amount)
+        color_hex_labels.next_to(color_square,DOWN)
+
+        self.play(Write(color_square),Write(color_hex_labels))
+        self.next_slide()
+
+        self.play(r_amount.animate.shift(RIGHT*(1/2)),
+                  g_amount.animate.shift((RIGHT*(1))),
+                  b_amount.animate.shift((RIGHT*(3/2))))
+        self.play(color_hex_labels.animate.shift(LEFT))
+        self.next_slide()
+
+        self.play(FadeToColor(r_amount,RED),FadeToColor(g_amount,GREEN),FadeToColor(b_amount,BLUE))
+        self.next_slide()
+
+        color_fig = VGroup(color_square,color_hex_labels)
         
 
+        g_amount_target = Text("00",color=GREEN)
+        g_amount_target.move_to(g_amount.get_center())
 
+        b_amount_target = Text("00",color=BLUE)
+        b_amount_target.move_to(b_amount.get_center())
 
+        self.play(Transform(g_amount,g_amount_target),Transform(b_amount,b_amount_target),FadeToColor(color_square,"#ff0000"))
+        self.next_slide()
 
-        
+        r_amount_target = Text("00",color=RED)
+        r_amount_target.move_to(r_amount.get_center())
+
+        g_amount_target = Text("ff",color=GREEN)
+        g_amount_target.move_to(g_amount.get_center())
+
+        b_amount_target = Text("00",color=BLUE)
+        b_amount_target.move_to(b_amount.get_center())
+
+        self.play(Transform(r_amount,r_amount_target),Transform(g_amount,g_amount_target),FadeToColor(color_square,"#00ff00"))
+        self.next_slide()
+
+        r_amount_target = Text("00",color=RED)
+        r_amount_target.move_to(r_amount.get_center())
+
+        g_amount_target = Text("00",color=GREEN)
+        g_amount_target.move_to(g_amount.get_center())
+
+        b_amount_target = Text("ff",color=BLUE)
+        b_amount_target.move_to(b_amount.get_center())
+
+        self.play(Transform(g_amount,g_amount_target),Transform(b_amount,b_amount_target),FadeToColor(color_square,"#0000ff"))
+        self.next_slide()
+
+        r_amount_target = Text("00",color=RED)
+        r_amount_target.move_to(r_amount.get_center())
+
+        g_amount_target = Text("ff",color=GREEN)
+        g_amount_target.move_to(g_amount.get_center())
+
+        b_amount_target = Text("ff",color=BLUE)
+        b_amount_target.move_to(b_amount.get_center())
+
+        self.play(Transform(r_amount,r_amount_target),Transform(g_amount,g_amount_target),Transform(b_amount,b_amount_target),FadeToColor(color_square,"#00ffff"))
+        self.next_slide()
+
+        r_amount_target = Text("ff",color=RED)
+        r_amount_target.move_to(r_amount.get_center())
+
+        g_amount_target = Text("ff",color=GREEN)
+        g_amount_target.move_to(g_amount.get_center())
+
+        b_amount_target = Text("00",color=BLUE)
+        b_amount_target.move_to(b_amount.get_center())
+
+        self.play(Transform(r_amount,r_amount_target),Transform(g_amount,g_amount_target),Transform(b_amount,b_amount_target),FadeToColor(color_square,"#ffff00"))
+        self.next_slide()
+
+        r_amount_target = Text("ff",color=RED)
+        r_amount_target.move_to(r_amount.get_center())
+
+        g_amount_target = Text("00",color=GREEN)
+        g_amount_target.move_to(g_amount.get_center())
+
+        b_amount_target = Text("ff",color=BLUE)
+        b_amount_target.move_to(b_amount.get_center())
+
+        self.play(Transform(r_amount,r_amount_target),Transform(g_amount,g_amount_target),Transform(b_amount,b_amount_target),FadeToColor(color_square,"#ff00ff"))
+        self.next_slide()
+
+        r_amount_target = Text("f7",color=RED)
+        r_amount_target.move_to(r_amount.get_center())
+
+        g_amount_target = Text("8c",color=GREEN)
+        g_amount_target.move_to(g_amount.get_center())
+
+        b_amount_target = Text("0a",color=BLUE)
+        b_amount_target.move_to(b_amount.get_center())
+
+        self.play(Transform(r_amount,r_amount_target),Transform(g_amount,g_amount_target),Transform(b_amount,b_amount_target),FadeToColor(color_square,"#f78c0a"))
+        self.next_slide()
+
+        # Apagando tudo
+        self.play(
+            *[FadeOut(mob)for mob in self.mobjects]
+        )
+        self.next_slide()
 
 #==================== Movimentação e Posição ====================
 class movimentacao_e_posicao(Slide):
     def construct(self):
-        pass
+        self.camera.background_color = "#1c1c1c"
+        myBaseTemplate = TexTemplate(
+            documentclass="\documentclass[preview]{standalone}"
+        )
+        myBaseTemplate.add_to_preamble(r"\usepackage{ragged2e}")  
+        self.wait()
+        self.next_slide()
+
+        #z_index Reference
+        #0 bk
+        #1 objects
+        #2 mark/text
+
+        np = NumberPlane(background_line_style={
+                "stroke_color": BLUE,
+                "stroke_width": 1,
+                "stroke_opacity": 0.6
+            })
+        np.z_index = 0
+        self.play(Write(np))
+        self.next_slide()
+
+        dot = Dot(color=RED,radius=0.15)
+        dot.z_index = 2
+
+        code = '''
+from manim import *
+from manim_slides import Slide
+
+class posicao(Slide):
+    def construct(self):
+        
+        dot = Dot(color=RED)
+        self.play(Create(dot))
+        self.next_slide()
+'''
+        rendered_code = Code(code=code, 
+                            tab_width=2,
+                            background_stroke_width=1,
+                            background_stroke_color=WHITE,
+                            insert_line_no=True,
+                            style=Code.styles_list[15],
+                            background="rectangle",
+                            language="python").scale(0.8)
+        rendered_code.shift(LEFT*4)
+        rendered_code.shift(UP*2)
+        self.play(Write(rendered_code),Create(dot))
+        self.next_slide()
+
+        code = '''
+from manim import *
+from manim_slides import Slide
+
+class posicao(Slide):
+    def construct(self):
+        
+        dot = Dot(color=RED)
+        
+        dot.move_to([1,2,0])
+        
+        self.play(Create(dot))
+        self.next_slide()
+'''
+        rendered_code_target = Code(code=code, 
+                            tab_width=2,
+                            background_stroke_width=1,
+                            background_stroke_color=WHITE,
+                            insert_line_no=True,
+                            style=Code.styles_list[15],
+                            background="rectangle",
+                            language="python").scale(0.8)
+        rendered_code_target.move_to([-4,2,0])
+        self.play(Transform(rendered_code,rendered_code_target))
+        self.next_slide()
+
+        line_x = Line([1,0,0],[1,2,0])
+        line_y = Line([0,2,0],[1,2,0])
+
+        self.play(Write(line_x),Write(line_y),dot.animate.move_to([1,2,0]))
+        self.next_slide()
+
+        self.play(FadeOut(line_x),FadeOut(line_y))
+
+        code = '''
+from manim import *
+from manim_slides import Slide
+
+class posicao(Slide):
+    def construct(self):
+        
+        dot = Dot(color=RED)
+        
+        dot.move_to([3,-2,0])
+        
+        self.play(Create(dot))
+        self.next_slide()
+'''
+        rendered_code_target = Code(code=code, 
+                            tab_width=2,
+                            background_stroke_width=1,
+                            background_stroke_color=WHITE,
+                            insert_line_no=True,
+                            style=Code.styles_list[15],
+                            background="rectangle",
+                            language="python").scale(0.8)
+        rendered_code_target.move_to([-4,2,0])
+        self.play(Transform(rendered_code,rendered_code_target))
+        self.next_slide()
+
+        line_x = Line([3,0,0],[3,-2,0])
+        line_y = Line([0,-2,0],[3,-2,0])
+
+        self.play(Write(line_x),Write(line_y),dot.animate.move_to([3,-2,0]))
+        self.next_slide()
+
+        self.play(FadeOut(line_x),FadeOut(line_y))
+        
+        code = '''
+from manim import *
+from manim_slides import Slide
+
+class posicao(Slide):
+    def construct(self):
+        
+        dot = Dot(color=RED)
+        
+        dot.shift([2,2,0])
+        
+        self.play(Create(dot))
+        self.next_slide()
+'''
+        rendered_code_target = Code(code=code, 
+                            tab_width=2,
+                            background_stroke_width=1,
+                            background_stroke_color=WHITE,
+                            insert_line_no=True,
+                            style=Code.styles_list[15],
+                            background="rectangle",
+                            language="python").scale(0.8)
+        rendered_code_target.move_to([-4,2,0])
+        self.play(Transform(rendered_code,rendered_code_target))
+        self.next_slide()
+
+        arrow_vec = Arrow(dot.get_center(),dot.get_center()+[2,2,0])
+
+        self.play(Write(arrow_vec))
+        self.next_slide()
+        
+        self.play(dot.animate.shift([[2,2,0]]))
+        self.play(FadeOut(arrow_vec))
+        self.next_slide()
 
 
+        code = '''
+from manim import *
+from manim_slides import Slide
+
+class posicao(Slide):
+    def construct(self):
+        
+        dot = Dot(color=RED)
+        
+        dot.shift(UP*2 + RIGHT*2)
+        
+        self.play(Create(dot))
+        self.next_slide()
+'''
+        rendered_code_target = Code(code=code, 
+                            tab_width=2,
+                            background_stroke_width=1,
+                            background_stroke_color=WHITE,
+                            insert_line_no=True,
+                            style=Code.styles_list[15],
+                            background="rectangle",
+                            language="python").scale(0.8)
+        rendered_code_target.move_to([-4,2,0])
+        self.play(Transform(rendered_code,rendered_code_target))
+        self.play(dot.animate.shift([-2,-2,0]))
+        self.next_slide()
+
+        arrow_vec = Arrow(dot.get_center(),dot.get_center()+(UP*2 + RIGHT*2))
+
+        self.play(Write(arrow_vec))
+        self.next_slide()
+        
+        self.play(dot.animate.shift([UP*2 + RIGHT*2]))
+        self.play(FadeOut(arrow_vec))
+        self.next_slide()
+
+        code = '''
+from manim import *
+from manim_slides import Slide
+
+class posicao(Slide):
+    def construct(self):
+        
+        dot = Dot(color=RED)
+        
+        dot.shift(UP*2)
+        
+        self.play(Create(dot))
+        self.next_slide()
+'''
+        rendered_code_target = Code(code=code, 
+                            tab_width=2,
+                            background_stroke_width=1,
+                            background_stroke_color=WHITE,
+                            insert_line_no=True,
+                            style=Code.styles_list[15],
+                            background="rectangle",
+                            language="python").scale(0.8)
+        rendered_code_target.move_to([-4,2,0])
+        self.play(Transform(rendered_code,rendered_code_target))
+        self.next_slide()
+
+        arrow_vec = Arrow(dot.get_center(),dot.get_center()+(UP*2))
+
+        self.play(Write(arrow_vec))
+        self.next_slide()
+        
+        self.play(dot.animate.shift(UP*2))
+        self.play(FadeOut(arrow_vec))
+        self.next_slide()
+
+        pergunta = Text("Usando a função shift, qual o vetor que usamos para voltar a origem ?").scale(0.5)
+        rect = RoundedRectangle(corner_radius=0.5, height=1.5, width=11.0)
+        rect.set_fill(color="#000000",opacity=1)
+        
+        pergunta.z_index = 2
+        rect.z_index = 1
+        
+        rect.move_to([0,-2,0])
+        pergunta.move_to(rect.get_center())
+
+        self.play(FadeIn(rect))
+        self.play(Write(pergunta))
+        self.next_slide()
+
+        self.play(FadeOut(rect),FadeOut(pergunta))
+
+        code = '''
+from manim import *
+from manim_slides import Slide
+
+class posicao(Slide):
+    def construct(self):
+        
+        dot = Dot(color=RED)
+        
+        dot.shift(DOWN*2 + LEFT*5)
+        
+        self.play(Create(dot))
+        self.next_slide()
+'''
+        rendered_code_target = Code(code=code, 
+                            tab_width=2,
+                            background_stroke_width=1,
+                            background_stroke_color=WHITE,
+                            insert_line_no=True,
+                            style=Code.styles_list[15],
+                            background="rectangle",
+                            language="python").scale(0.8)
+        rendered_code_target.move_to([-4,2,0])
+        self.play(Transform(rendered_code,rendered_code_target))
+        self.next_slide()
+
+        arrow_vec = Arrow(dot.get_center(),dot.get_center()+(DOWN*2 + LEFT*5))
+
+        self.play(Write(arrow_vec))
+        self.next_slide()
+        
+        self.play(dot.animate.shift(DOWN*2 + LEFT*5))
+        self.play(FadeOut(arrow_vec))
+        self.next_slide()
+
+
+
+
+        # Apagando tudo
+        self.play(
+            *[FadeOut(mob)for mob in self.mobjects]
+        )
+        self.next_slide()

@@ -1,2 +1,2 @@
-manim -qh presentation.py introducao
-manim-slides introducao
+manim -qh presentation.py movimentacao_e_posicao
+manim-slides movimentacao_e_posicao
