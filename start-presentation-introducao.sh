@@ -1,0 +1,1 @@
+manim-slides introducao --fullscreen

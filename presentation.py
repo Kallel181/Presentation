@@ -172,7 +172,7 @@ class introducao(Slide):
         self.next_slide()   
 
         
-        grant_image = ImageMobject("assets\grant_sanderson.png").scale(0.5)
+        grant_image = ImageMobject("assets/grant_sanderson.png").scale(0.5)
         grant_image.move_to(ORIGIN)
         
         grant_text = Text("Grant Sanderson").scale(0.6)
@@ -183,9 +183,9 @@ class introducao(Slide):
         self.next_slide()
 
 
-        yt_grant_logo = SVGMobject(r"assets\3B1B_Logo.svg").scale(1.1)
+        yt_grant_logo = SVGMobject(r"assets/3B1B_Logo.svg").scale(1.1)
         yt_name = Text("3Blue1Brown").scale(0.6)
-        yt_logo = SVGMobject("assets\youtube-svgrepo-com.svg").scale(0.3).next_to(yt_name,LEFT)
+        yt_logo = SVGMobject("assets/youtube-svgrepo-com.svg").scale(0.3).next_to(yt_name,LEFT)
 
         underline = VGroup(yt_name,yt_logo)
         underline.next_to(yt_grant_logo,DOWN)
@@ -212,10 +212,10 @@ class introducao(Slide):
         self.next_slide()
 
 
-        python_logo = ImageMobject("assets\Python-logo-notext.svg.png")
-        miktext_logo = ImageMobject("assets\miktexlogo.png")
-        visual_logo = ImageMobject("assets\VS_Code_logo.png")
-        ffmpeg_logo = ImageMobject(r"assets\1280px-FFmpeg-Logo.png")
+        python_logo = ImageMobject("assets/Python-logo-notext.svg.png")
+        miktext_logo = ImageMobject("assets/miktexlogo.png")
+        visual_logo = ImageMobject("assets/VS_Code_logo.png")
+        ffmpeg_logo = ImageMobject(r"assets/1280px-FFmpeg-Logo.png")
 
         python_logo.shift(UL+LEFT)
         miktext_logo.shift(UR+RIGHT)

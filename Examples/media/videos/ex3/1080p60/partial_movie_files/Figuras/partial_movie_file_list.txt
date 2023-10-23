@@ -1,0 +1,7 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/kallel/Documents/obsidian-vaults/Presentation/Examples/media/videos/ex3/1080p60/partial_movie_files/Figuras/2902699114_3532544039_223132457.mp4'
+file 'file:/home/kallel/Documents/obsidian-vaults/Presentation/Examples/media/videos/ex3/1080p60/partial_movie_files/Figuras/3931933789_1076466279_344855908.mp4'
+file 'file:/home/kallel/Documents/obsidian-vaults/Presentation/Examples/media/videos/ex3/1080p60/partial_movie_files/Figuras/3931933789_2120499937_571226548.mp4'
+file 'file:/home/kallel/Documents/obsidian-vaults/Presentation/Examples/media/videos/ex3/1080p60/partial_movie_files/Figuras/3931933789_1076466279_4252586083.mp4'
+file 'file:/home/kallel/Documents/obsidian-vaults/Presentation/Examples/media/videos/ex3/1080p60/partial_movie_files/Figuras/3931933789_1906838324_1126066738.mp4'
+file 'file:/home/kallel/Documents/obsidian-vaults/Presentation/Examples/media/videos/ex3/1080p60/partial_movie_files/Figuras/3931933789_1076466279_2477309405.mp4'
